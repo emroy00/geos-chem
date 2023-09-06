@@ -1332,19 +1332,19 @@ CONTAINS
 
        ! Read data required for Hg2 gas-particle partitioning
        ! (H Amos, 25 Oct 2011)
-       IF ( Input_Opt%ITS_A_MERCURY_SIM .and. (.not. Input_Opt%DryRun) ) THEN
-          CALL Read_Hg2_Partitioning( Input_Opt, State_Grid, State_Met, & 
-                                      MONTH,     RC )
-          ! Optional memory prints (level >= 3)
-          if ( MemDebugLevel >0 ) THEN
-             call ESMF_VMBarrier(VM, RC=STATUS)
-             _VERIFY(STATUS)
-             call MAPL_MemUtilsWrite(VM, &
-                     'gchp_chunk_run:, Read_Hg2_Partitioning', RC=STATUS )
-             _VERIFY(STATUS)
-          endif
+       !IF ( Input_Opt%ITS_A_MERCURY_SIM .and. (.not. Input_Opt%DryRun) ) THEN
+       !   CALL Read_Hg2_Partitioning( Input_Opt, State_Grid, State_Met, & 
+       !                               MONTH,     RC )
+       !   ! Optional memory prints (level >= 3)
+       !   if ( MemDebugLevel >0 ) THEN
+       !      call ESMF_VMBarrier(VM, RC=STATUS)
+       !      _VERIFY(STATUS)
+       !      call MAPL_MemUtilsWrite(VM, &
+       !              'gchp_chunk_run:, Read_Hg2_Partitioning', RC=STATUS )
+       !      _VERIFY(STATUS)
+       !   endif
 
-       ENDIF
+       !ENDIF
 
        ! Optional memory prints (level >= 3)
        if ( MemDebugLevel > 0 ) THEN
